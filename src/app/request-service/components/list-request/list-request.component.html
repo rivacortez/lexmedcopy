@@ -1,0 +1,57 @@
+<app-toolbar-content></app-toolbar-content>
+<div class="list-request-container max-w-4xl mx-auto p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg border border-blue-300">
+  <div class="text-center mb-6">
+    <h1 class="text-4xl font-bold text-blue-700">Lista de Solicitudes de Servicio</h1>
+  </div>
+
+  <mat-form-field appearance="outline" class="w-full mb-6">
+    <mat-label>Buscar por asunto</mat-label>
+    <input matInput #filterInput placeholder="Buscar..." class="border border-blue-300 rounded-lg focus:ring-blue-600 focus:border-blue-600" />
+  </mat-form-field>
+
+  <div class="overflow-x-auto rounded-lg shadow-md">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 w-full bg-white">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-blue-100 text-blue-800 font-semibold py-3">ID</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4"> {{ request?.id }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-blue-100 text-blue-800 font-semibold py-3">Tipo</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4"> {{ request?.type }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="inquiry">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-blue-100 text-blue-800 font-semibold py-3">Consulta</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4"> {{ request?.inquiry }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="subject">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-blue-100 text-blue-800 font-semibold py-3">Asunto</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4"> {{ request?.subject }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="creationDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-blue-100 text-blue-800 font-semibold py-3">Creación</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4"> {{ request?.creationDate | date: 'short' }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="bg-blue-100 text-blue-800 font-semibold py-3">Acciones</th>
+        <td mat-cell *matCellDef="let request" class="py-2 px-4">
+          <mat-button-toggle-group [value]="request?.statusId" (change)="onStatusChange(request, $event.value)" appearance="legacy">
+            <mat-button-toggle [value]="2" color="primary" class="bg-blue-100 text-blue-700 hover:bg-blue-200 rounded-md">Aceptar</mat-button-toggle>
+            <mat-button-toggle [value]="3" color="warn" class="bg-red-100 text-red-700 hover:bg-red-200 rounded-md">Rechazar</mat-button-toggle>
+          </mat-button-toggle-group>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="hover:bg-blue-50"></tr>
+    </table>
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="mt-6"></mat-paginator>
+</div>
+
+<app-footer-content></app-footer-content>

@@ -1,0 +1,46 @@
+.request-history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.list-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-and-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 60%;
+}
+
+.custom-table {
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+.mat-header-cell, .mat-cell {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mat-row {
+  background-color: #f8f8f8;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.mat-cell {
+  word-wrap: break-word;
+}

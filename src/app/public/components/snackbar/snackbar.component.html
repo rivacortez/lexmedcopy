@@ -1,0 +1,11 @@
+<div class="snackbar">
+  <div class="snackbar__content">
+    <span matSnackBarLabel>{{ data.message }}</span>
+    <span matSnackBarActions>
+            <button mat-icon-button matSnackBarAction (click)="snackBarRef.dismissWithAction()">
+                <mat-icon fontIcon="{{ data.icon }}"></mat-icon>
+            </button>
+        </span>
+  </div>
+  <mat-progress-bar [value]="progress" />
+</div>

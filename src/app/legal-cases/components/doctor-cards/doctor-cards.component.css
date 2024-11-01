@@ -1,0 +1,11 @@
+.doctor-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+}
+button {
+  background-color: #4A90E2;
+  color: white;
+  padding: 10px;
+}

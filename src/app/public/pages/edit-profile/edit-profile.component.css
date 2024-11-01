@@ -1,0 +1,299 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  padding: 20px;
+  background-color: #A67360;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100px;
+  padding: 20px;
+  background-color: #F4F4F4;
+  margin: 20px;
+  flex: 1;
+  flex-direction: column;
+  transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+@media (max-width: 320px) {
+  .content {
+    padding: 1px;
+    margin: 1px;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.password-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-right: 2vw;
+  flex-shrink: 1;
+  transition: margin-right 0.5s ease;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 3;
+  transition: flex-shrink 0.5s ease;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.information input {
+  font-size: calc(18px + 0.5vw);
+  padding: 6px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  transition: border-color 0.5s ease;
+}
+
+.information label {
+  font-size: calc(20px + 0.5vw);
+  padding: 0px;
+  transition: font-size 0.5s ease, padding 0.5s ease;
+}
+
+.description img {
+  padding: 40px;
+  max-height: 275px;
+  height: auto;
+  max-width: 100%;
+  min-width: 50px;
+  width: auto;
+  transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease;
+}
+
+@media (max-width: 800px) {
+  .description img {
+    padding: 20px;
+    max-width: 150px;
+    transition: padding 0.5s ease, max-width 0.5s ease;
+  }
+}
+
+@media (max-width: 320px) {
+  .description img {
+    padding: 20px;
+    max-width: 75px;
+    transition: padding 0.5s ease, max-width 0.5s ease;
+  }
+}
+
+.password input {
+  font-size: calc(20px + 0.5vw);
+  padding: 2px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  transition: border-color 0.5s ease;
+  flex: 1 1 auto;
+}
+
+.password label {
+  font-size: calc(18px + 0.5vw);
+  padding: 0px;
+  transition: font-size 0.5s ease, padding 0.5s ease;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 1000px) {
+  .password {
+    flex-direction: column;
+    margin-right: calc(20px);
+    transition: margin-right 0.5s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .password-group {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .password {
+    margin-right: calc(1px);
+    transition: margin-right 0.5s ease;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .description {
+    margin-right: calc(20px);
+    transition: margin-right 0.5s ease;
+  }
+  .information label {
+    font-size: calc(12px);
+    transition: font-size 0.5s ease;
+  }
+  .information input {
+    font-size: calc(10px);
+    transition: font-size 0.5s ease;
+  }
+}
+
+@media (max-width: 320px) {
+  .description {
+    margin-right: calc(1px);
+    transition: margin-right 0.5s ease;
+  }
+  .information input {
+    font-size: 10px;
+    padding: 1px 4px;
+    width: 100px;
+  }
+  .information label {
+    font-size: 10px;
+  }
+}
+
+.password {
+  transition: margin-bottom 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 800px) {
+  .info-row {
+    margin-left: 20px;
+  }
+}
+
+.buttons {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: justify-content 0.3s ease, margin 0.3s ease;
+}
+
+.buttons button, .buttons a {
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 10px 40px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .buttons {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .buttons button, .buttons a {
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .buttons button, .buttons a {
+    padding: 5px;
+    font-size: 8px;
+  }
+}
+
+.buttons button:hover, .buttons a:hover {
+  background-color: #B7725B;
+  color: white;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  transition: padding 0.3s ease;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.submit #upload-btn {
+  cursor: pointer;
+  background-color: #F2EFDC;
+  border: 1px solid #F2EFDC;
+  border-radius: 4px;
+  font-size: 2rem;
+  padding: 10px 5px;
+  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+  flex: 0 0 auto;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.submit #file-name {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .submit #upload-btn {
+    font-size: 0.6rem;
+    padding: 8px 5px;
+  }
+
+  .submit #file-name {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .submit #upload-btn {
+    font-size: 0.6rem;
+    padding: 6px 5px;
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  .submit #file-name {
+    font-size: 0.5rem;
+  }
+}

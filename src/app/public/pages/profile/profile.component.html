@@ -1,0 +1,92 @@
+<app-toolbar-content></app-toolbar-content>
+<div class="container mx-auto p-4">
+  <div class="bg-white shadow-md rounded-lg p-6">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold">User Profile</h1>
+      <button (click)="toggleEditMode()" class="bg-blue-500 text-white px-4 py-2 rounded">
+        {{ isEditMode ? 'Cancel' : 'Edit' }}
+      </button>
+    </div>
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-1/3 mb-4 md:mb-0">
+        <img src="/assets/img/User.png" alt="User profile" class="w-full rounded-lg shadow-md" fill>
+      </div>
+      <div class="md:w-2/3 md:pl-6">
+        <div *ngIf="!isEditMode">
+          <p><strong>Name:</strong> {{ user.name }}</p>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>User Type:</strong> {{ user.userType }}</p>
+          <p><strong>Subscription:</strong> {{ user.subscription }}</p>
+          <ng-container *ngIf="isLawyer()">
+            <p><strong>Years of Experience:</strong> {{ user.yearsOfExperience }}</p>
+            <p><strong>Specialization:</strong> {{ user.specialization }}</p>
+            <p><strong>Cases Won:</strong> {{ user.casesWon }}</p>
+            <p><strong>Price:</strong> {{ user.price }}</p>
+          </ng-container>
+          <ng-container *ngIf="isDoctor()">
+            <p><strong>Specialization:</strong> {{ user.specialization }}</p>
+            <p><strong>Place:</strong> {{ user.place }}</p>
+            <p><strong>Consultations Completed:</strong> {{ user.consultationsCompleted }}</p>
+            <p><strong>Price:</strong> {{ user.price }}</p>
+          </ng-container>
+        </div>
+        <form *ngIf="isEditMode" (ngSubmit)="saveChanges()">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-4">
+            <label for="subscription" class="block text-gray-700 text-sm font-bold mb-2">Subscription:</label>
+            <select id="subscription" name="subscription" [(ngModel)]="user.subscription" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </div>
+          <ng-container *ngIf="isLawyer()">
+            <div class="mb-4">
+              <label for="yearsOfExperience" class="block text-gray-700 text-sm font-bold mb-2">Years of Experience:</label>
+              <input type="number" id="yearsOfExperience" name="yearsOfExperience" [(ngModel)]="user.yearsOfExperience" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="lawyerSpecialization" class="block text-gray-700 text-sm font-bold mb-2">Specialization:</label>
+              <input type="text" id="lawyerSpecialization" name="specialization" [(ngModel)]="user.specialization" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="casesWon" class="block text-gray-700 text-sm font-bold mb-2">Cases Won:</label>
+              <input type="number" id="casesWon" name="casesWon" [(ngModel)]="user.casesWon" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="lawyerPrice" class="block text-gray-700 text-sm font-bold mb-2">Price:</label>
+              <input type="text" id="lawyerPrice" name="price" [(ngModel)]="user.price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+          </ng-container>
+          <ng-container *ngIf="isDoctor()">
+            <div class="mb-4">
+              <label for="doctorSpecialization" class="block text-gray-700 text-sm font-bold mb-2">Specialization:</label>
+              <input type="text" id="doctorSpecialization" name="specialization" [(ngModel)]="user.specialization" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="place" class="block text-gray-700 text-sm font-bold mb-2">Place:</label>
+              <input type="text" id="place" name="place" [(ngModel)]="user.place" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="consultationsCompleted" class="block text-gray-700 text-sm font-bold mb-2">Consultations Completed:</label>
+              <input type="number" id="consultationsCompleted" name="consultationsCompleted" [(ngModel)]="user.consultationsCompleted" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+              <label for="doctorPrice" class="block text-gray-700 text-sm font-bold mb-2">Price:</label>
+              <input type="text" id="doctorPrice" name="price" [(ngModel)]="user.price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+          </ng-container>
+          <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer-content></app-footer-content>

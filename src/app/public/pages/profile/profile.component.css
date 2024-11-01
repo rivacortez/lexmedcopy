@@ -1,0 +1,102 @@
+.profile-container {
+  background-color: #003366;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.profile-title {
+  color: #2ECC71;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-image {
+  position: relative;
+  margin-right: 20px;
+}
+
+.user-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #cc99ff;
+  border-radius: 50%;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background-color: #2ECC71;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-fields {
+  flex-grow: 1;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: #b3d9ff;
+}
+
+.field input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3399ff;
+  color: white;
+  font-size: 14px;
+}
+
+.field input::placeholder {
+  color: #b3d9ff;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.save-btn {
+  background-color: #003366;
+  color: white;
+  margin-right: 10px;
+}
+
+.cancel-btn {
+  background-color: #666666;
+  color: white;
+}

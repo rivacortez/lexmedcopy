@@ -1,0 +1,221 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Juan Carlos Perez Rodriguez",
+      "email": "juan.carlos@example.com",
+      "password": "password123",
+      "userType": "lawyer",
+      "subscription": "Premium",
+      "urlToImage": "https://www.narcity.com/media-library/image.jpg?id=25902742&width=1245&height=700&coordinates=0%2C5%2C0%2C5"
+    },
+    {
+      "id": 2,
+      "name": "Maria Luisa Gonzales Fernandez",
+      "email": "maria.luisa@example.com",
+      "password": "password456",
+      "userType": "lawyer",
+      "subscription": "Gold",
+      "urlToImage": "https://kcdefensecounsel.b-cdn.net/wp-content/uploads/2023/03/female-intelligent-law-attorney-lawyers-working-at-2023-03-08-20-54-26-utc-1-scaled.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Carlos Rodriguez",
+      "email": "carlos.rodriguez@example.com",
+      "password": "doctorpass123",
+      "userType": "doctor",
+      "specialization": "Cardiology",
+      "place": "Lima",
+      "urlToImage": "https://example.com/doctor1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dra. Ana Martinez",
+      "email": "ana.martinez@example.com",
+      "password": "doctorpass456",
+      "userType": "doctor",
+      "specialization": "Pediatrics",
+      "place": "Arequipa",
+      "urlToImage": "https://example.com/doctor2.jpg"
+    },
+    {
+      "name": "Pepito",
+      "specialization": "Doctor",
+      "email": "pepito123@gmail.com",
+      "password": "pepito123@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "A",
+      "specialization": "A",
+      "email": "A",
+      "password": "A",
+      "id": 6
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "userId": 0,
+      "type": "consultation",
+      "inquiry": "general",
+      "subject": "Roberto",
+      "description": "Opere la mano equivocada",
+      "creationDate": "2024-10-22T07:07:11.924Z",
+      "statusId": 2
+    },
+    {
+      "id": 2,
+      "userId": 0,
+      "type": "negligence",
+      "inquiry": "general",
+      "subject": "Pepito",
+      "description": "LE DI ANASTENCIA Y NUNCA MAS SE LEVANTO",
+      "creationDate": "2024-10-22T07:10:59.645Z",
+      "statusId": 3
+    },
+    {
+      "id": 3,
+      "userId": 0,
+      "type": "consultation",
+      "inquiry": "general",
+      "subject": "test",
+      "description": "test",
+      "creationDate": "2024-10-23T04:30:23.150Z",
+      "statusId": 3
+    },
+    {
+      "id": 4,
+      "userId": 0,
+      "type": "malpractice",
+      "inquiry": "urgent",
+      "subject": "asdasd",
+      "description": "asdasd",
+      "creationDate": "2024-10-29T02:00:27.402Z",
+      "statusId": 3
+    },
+    {
+      "id": 5,
+      "userId": 0,
+      "type": "malpractice",
+      "inquiry": "general",
+      "subject": "ASDASD",
+      "description": "ASDASD",
+      "creationDate": "2024-10-31T23:11:32.260Z",
+      "statusId": 3
+    },
+    {
+      "id": 6,
+      "userId": 0,
+      "type": "negligence",
+      "inquiry": "general",
+      "subject": "AAAAA",
+      "description": "AAAAAA",
+      "creationDate": "2024-10-31T23:11:51.501Z",
+      "statusId": 3
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "name": "pending",
+      "description": "La solicitud está pendiente de revisión"
+    },
+    {
+      "id": 2,
+      "name": "accepted",
+      "description": "La solicitud ha sido aceptada"
+    },
+    {
+      "id": 3,
+      "name": "rejected",
+      "description": "La solicitud ha sido rechazada"
+    }
+  ],
+  "subscriptionPlans": [
+    {
+      "id": 1,
+      "title": "Ayuda Legal",
+      "description": "Asistencia legal especializada de parte de abogados expertos en medicina legal.",
+      "price": 100,
+      "type": "legal"
+    },
+    {
+      "id": 2,
+      "title": "Suscripción Mensual",
+      "description": "Acceso exclusivo a consultas y asesorías especializadas en el ámbito de la medicina.",
+      "price": 50,
+      "type": "monthly"
+    }
+  ],
+  "lawyers": [
+    {
+      "id": 1,
+      "name": "Juan Carlos Perez Rodriguez",
+      "yearsOfExperience": 10,
+      "specialization": "Medical Malpractice Law",
+      "urlToImage": "https://www.narcity.com/media-library/image.jpg?id=25902742&width=1245&height=700&coordinates=0%2C5%2C0%2C5",
+      "casesWon": 50,
+      "price": "$300/hour",
+      "email": "juan.carlos@example.com",
+      "phoneNumber": "+1234567890",
+      "subscription": "Premium"
+    },
+    {
+      "id": 2,
+      "name": "Maria Luisa Gonzales Fernandez",
+      "yearsOfExperience": 15,
+      "specialization": "Healthcare Law",
+      "urlToImage": "https://kcdefensecounsel.b-cdn.net/wp-content/uploads/2023/03/female-intelligent-law-attorney-lawyers-working-at-2023-03-08-20-54-26-utc-1-scaled.jpg",
+      "casesWon": 70,
+      "price": "$350/hour",
+      "email": "maria.luisa@example.com",
+      "phoneNumber": "+1987654321",
+      "subscription": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Diego Flores Ramirez",
+      "yearsOfExperience": 12,
+      "specialization": "Pharmaceutical Law",
+      "urlToImage": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/03/16/12/saul-goodman.jpg?width=1200",
+      "casesWon": 60,
+      "price": "$320/hour",
+      "email": "diego.flores@example.com",
+      "phoneNumber": "+1122334455",
+      "subscription": "Standard"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Carlos Rodriguez",
+      "specialization": "Cardiology",
+      "yearsOfExperience": 15,
+      "urlToImage": "https://example.com/doctor1.jpg",
+      "consultationsCompleted": 500,
+      "price": "$200/hour",
+      "email": "carlos.rodriguez@example.com",
+      "phoneNumber": "+5111234567",
+      "place": "Lima"
+    },
+    {
+      "id": 2,
+      "name": "Dra. Ana Martinez",
+      "specialization": "Pediatrics",
+      "yearsOfExperience": 10,
+      "urlToImage": "https://example.com/doctor2.jpg",
+      "consultationsCompleted": 300,
+      "price": "$180/hour",
+      "email": "ana.martinez@example.com",
+      "phoneNumber": "+5122345678",
+      "place": "Arequipa"
+    }
+  ]
+}

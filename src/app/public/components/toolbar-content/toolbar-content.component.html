@@ -1,0 +1,38 @@
+<mat-toolbar class="toolbar bg-blue-600 text-white p-4">
+  <div class="flex items-center justify-between w-full">
+    <div class="flex items-center">
+      <p class="header-title text-xl font-bold">LexMedd</p>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <button mat-button routerLink="/list-request" aria-label="Lista de Solicitudes" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>list</mat-icon>
+        <span class="nav-text">Solicitudes</span>
+      </button>
+      <button mat-button routerLink="/list-history-request" aria-label="Historial de Solicitudes" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>history</mat-icon>
+        <span class="nav-text">Historial</span>
+      </button>
+      <button mat-button routerLink="/request/new" aria-label="Nueva Solicitud" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>add_circle</mat-icon>
+        <span class="nav-text">Nueva Solicitud</span>
+      </button>
+      <button mat-button routerLink="/subscription-plans" aria-label="Planes de Suscripción" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>assignment</mat-icon>
+        <span class="nav-text">Planes</span>
+      </button>
+      <button mat-button routerLink="/abogados" aria-label="Lista de Abogados" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>gavel</mat-icon>
+        <span class="nav-text">Abogados</span>
+      </button>
+      <button mat-button routerLink="/perfil" aria-label="Perfil" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>person</mat-icon>
+        <span class="nav-text">Perfil</span>
+      </button>
+      <button mat-button routerLink="/login" aria-label="Cerrar Sesión" (click)="logout()" class="hover:bg-blue-500 rounded-md p-2">
+        <mat-icon>logout</mat-icon>
+        <span class="nav-text">Cerrar Sesión</span>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

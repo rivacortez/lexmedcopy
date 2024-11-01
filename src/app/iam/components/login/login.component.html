@@ -1,0 +1,24 @@
+<form class="login-container">
+  <h1>Welcome to LexMed</h1>
+
+  <div class="login-options">
+    <b><a routerLink="/login">Log in</a></b>
+    <a routerLink="/register">Register</a>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="example@mail.com" [(ngModel)]="email" name="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="*****" [(ngModel)]="password" name="password">
+  </mat-form-field>
+
+  <mat-checkbox>Remember me</mat-checkbox>
+  <button mat-flat-button (click)="login()">Log in</button>
+  <a>Forgot my password</a>
+</form>

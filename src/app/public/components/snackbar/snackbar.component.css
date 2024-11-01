@@ -1,0 +1,17 @@
+.snackbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.snackbar__content {
+  display: flex;
+}
+
+.mat-icon {
+  color: #fff;
+}
+
+/* remove padding */
+::ng-deep .mat-mdc-snackbar-surface {
+  padding: 0 !important;
+}
